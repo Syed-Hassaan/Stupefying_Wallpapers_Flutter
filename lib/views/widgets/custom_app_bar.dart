@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+class CustomAppBar extends StatelessWidget {
+  String word1, word2;
+  CustomAppBar({super.key, required this.word1, required this.word2});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      child: RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(
+              text: word1,
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+              children: [
+                TextSpan(
+                    text: "${" " + word2}",
+                    style: TextStyle(
+                        color: Colors.orange, fontWeight: FontWeight.w600)),
+              ])),
+    );
+  }
+}
